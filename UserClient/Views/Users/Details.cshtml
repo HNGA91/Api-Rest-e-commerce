@@ -1,0 +1,27 @@
+﻿@model UserClient.Models.UserViewModel
+
+@{
+    ViewData["Title"] = "Détails utilisateur";
+}
+
+<h2>Détails de l'utilisateur</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">Nom</dt>
+    <dd class="col-sm-9">@Model.Nom</dd>
+
+    <dt class="col-sm-3">Prénom</dt>
+    <dd class="col-sm-9">@Model.Prenom</dd>
+
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Model.Email</dd>
+
+    <dt class="col-sm-3">Téléphone</dt>
+    <dd class="col-sm-9">@Model.Telephone</dd>
+
+    <dt class="col-sm-3">Rôle</dt>
+    <dd class="col-sm-9">@Model.Role</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Modifier</a>
+<a asp-action="Index" class="btn btn-secondary">Retour</a>
